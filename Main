@@ -1,0 +1,22 @@
+#-*- coding:utf-8 -*-
+# ====================================================== #
+# Yonsei University - Seamless Transportation Laboratory #
+# Ho Suk, Jae-Young Moon                                 #
+# ====================================================== #
+
+from NMEAInterpreter import*
+
+import time
+
+def main():
+    try:
+        MyNMEAInterpreter = NMEAInterpreter()
+            
+        while True:
+            MyGNSSProcessor.convertDataUnit4PX2()
+            time.sleep(0.01)
+    finally:
+        MyNMEAInterpreter.MySerialCommunicator.ser.close()
+    
+if __name__ == "__main__":
+    main()
