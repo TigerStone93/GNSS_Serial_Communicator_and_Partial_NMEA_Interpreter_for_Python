@@ -11,4 +11,4 @@ Additional Library : pyserial, utm, numpy
 
 To use, run Main.py
 
-You can use and edit this code freely but please specify the original author.
+You can use and edit this code freely but please specify the original author. (MIT License)
