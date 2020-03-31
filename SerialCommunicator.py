@@ -8,7 +8,7 @@
 import threading
 import serial # library download is needed, https://pypi.org/project/pyserial/
 
-PORT = 'COM11'
+PORT = 'COM10' # for Windows   or   '/dev/ttyACM0' # for Linux(Ubuntu)
 BAUD_RATE = 115200
 PARITY = serial.PARITY_NONE
 STOP_BITS = serial.STOPBITS_ONE
@@ -39,7 +39,7 @@ class SerialCommunicator(threading.Thread):
                 line = str(ser.readline())
                 line = line[2:] # discard b' at start and ' at end
                 item_list = line.split(',')
-                if item_list[0] == '$GNRMC':
+                if item_list[0] == '$GNRMC': # for GNSS   or   '$INRMC' for INS
                     self.UTC_time = float(item_list[1]) # hhmmss.sss
                     self.activity_status = item_list[2] # A : Active , V : Void
                     self.latitude = float(item_list[3]) # ddmm.mmmm
@@ -69,7 +69,7 @@ class SerialCommunicator(threading.Thread):
                 line = str(ser.readline())
                 line = line[2:] # discard b' at start and ' at end # -1
                 item_list = line.split(',')
-                if item_list[0] == '$GNRMC':
+                if item_list[0] == '$GNRMC': # for GNSS   or   '$INRMC' for INS
                     self.UTC_time = float(item_list[1]) # hhmmss.sss
                     self.activity_status = item_list[2] # A : Active , V : Void
                     self.latitude = float(item_list[3]) # ddmm.mmmm
