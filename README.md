@@ -1,9 +1,9 @@
 # GNSS Serial Communicator and Partial NMEA Interpreter for Python #
 
-1. GNSS Serial Communicator for u-blox ZED-F9P and Synerex MRP-2000
+1. GNSS Serial Communicator (Tested on u-blox ZED-F9P, Synerex MRP-2000, and Septentrio AsteRx-i)
 2. Partial NMEA Interpreter for GNRMC Sentence
 
-Author : Ho Suk (MS. Course, Yonsei University - Seamless Transportation Laboratory)
+Author : Ho Suk (Ph.D. Course, Yonsei University - Seamless Transportation Laboratory)
 
 Language : Python
 
